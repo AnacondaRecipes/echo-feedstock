@@ -12,6 +12,8 @@ source:
 build:
   noarch: python
   number: 0
+  # no qt support for ppc64le
+  skip: True  # [ppc64le]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
