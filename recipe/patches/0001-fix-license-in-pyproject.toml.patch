@@ -1,0 +1,25 @@
+From d2275115ca48f4f293b4a7b9145c2b37b5027391 Mon Sep 17 00:00:00 2001
+From: Andrii Osipov <aosipov@anaconda.com>
+Date: Mon, 23 Jun 2025 05:50:45 -0700
+Subject: [PATCH] fix license in pyproject.toml
+
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 752a5ed..fe2fd88 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -2,7 +2,7 @@
+ name = "echo"
+ description = "Callback Properties in Python"
+ readme = "README.rst"
+-license = "MIT"
++license = {text = "MIT"}
+ maintainers = [ { name = "Chris Beaumont and Thomas Robitaille", email = "thomas.robitaille@gmail.com" } ]
+ authors = [ { name = "Chris Beaumont and Thomas Robitaille", email = "thomas.robitaille@gmail.com" } ]
+ requires-python = ">=3.10"
+-- 
+2.39.3 (Apple Git-146)
+
