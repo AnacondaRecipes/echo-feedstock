@@ -26,12 +26,11 @@ requirements:
     - wheel
     - setuptools >=61.2
     - setuptools_scm
-    - numpy {{ numpy }}
   run:
     - python
     - numpy
   run_constrained:
-    - pyqt5 >=5.14
+    - pyqt >=5.14
 
 test:
   imports:
