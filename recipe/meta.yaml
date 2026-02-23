@@ -43,14 +43,13 @@ test:
 
 about:
   home: https://github.com/glue-viz/echo
-  summary: Callback Properties in Python
   license: MIT
   license_family: MIT
   license_file: LICENSE
+  summary: Callback Properties in Python
+  description: Echo is a small library for attaching callback functions to property state changes.
   dev_url: https://github.com/glue-viz/echo
   doc_url: https://echo.readthedocs.io
-  description: |
-    Echo is a small library for attaching callback functions to property state changes.
 
 extra:
   recipe-maintainers:
