@@ -1,5 +1,5 @@
 {% set name = "echo" %}
-{% set version = "0.11.1" %}
+{% set version = "0.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5d5618331b6ac090d097df7aa468f0676cc88fbbbda64a650f42b4a1d80534b9
+  sha256: 17ef1998628a6e152b1bf7551b1004df5fcd80f307f0f31fb18c4d651f74120d
   patches:
     - patches/0001-fix-license-in-pyproject.toml.patch
 
@@ -43,14 +43,13 @@ test:
 
 about:
   home: https://github.com/glue-viz/echo
-  summary: Callback Properties in Python
   license: MIT
   license_family: MIT
   license_file: LICENSE
+  summary: Callback Properties in Python
+  description: Echo is a small library for attaching callback functions to property state changes.
   dev_url: https://github.com/glue-viz/echo
   doc_url: https://echo.readthedocs.io
-  description: |
-    Echo is a small library for attaching callback functions to property state changes.
 
 extra:
   recipe-maintainers:
