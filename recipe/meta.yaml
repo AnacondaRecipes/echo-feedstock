@@ -1,5 +1,5 @@
 {% set name = "echo" %}
-{% set version = "0.12.1" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 17ef1998628a6e152b1bf7551b1004df5fcd80f307f0f31fb18c4d651f74120d
+  sha256: 0487f835e38a51ae7487190a23e4a943d4e0179714f5a24df92a35782a53b331
   patches:
     - patches/0001-fix-license-in-pyproject.toml.patch
 
