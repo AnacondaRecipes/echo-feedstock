@@ -1,20 +1,20 @@
 {% set name = "echo" %}
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0487f835e38a51ae7487190a23e4a943d4e0179714f5a24df92a35782a53b331
+  sha256: d4cbe0462981b68a98d14227d976c76c3752c6065c298227d1bf8c36d9b84672
   patches:
     - patches/0001-fix-license-in-pyproject.toml.patch
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<310]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -26,7 +26,7 @@ requirements:
     - python
     - numpy
   run_constrained:
-    - pyqt >=5.14
+    - pyqt >=5.14  # from `qt` extra; remaining extras are unbounded or dev-only
 
 test:
   imports:
@@ -36,7 +36,7 @@ test:
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
-    - pytest --pyargs echo.tests
+    - pytest -vv --pyargs echo.tests
   requires:
     - pip
     - pytest
